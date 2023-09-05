@@ -4,6 +4,7 @@ export default function Home() {
 return (
     <main className="">
         <div className='Corasel'>
+          asdasdasd
 
         </div>
     </main>
