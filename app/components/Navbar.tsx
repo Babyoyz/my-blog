@@ -4,14 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface NavbarProps {
-  urls: Array<object>;
+  urls: Array<any>;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ urls }) => {
-  const slideOverContainer1 = useRef<HTMLSpanElement | null>(null);
-  const slideOverContainer = useRef<HTMLSpanElement | null>(null);
-  const slideOverBG = useRef<HTMLSpanElement | null>(null);
-  const slideOver = useRef<HTMLSpanElement | null>(null);
+  const slideOverContainer1 :any = useRef<HTMLSpanElement | null>(null);
+  const slideOverContainer :any = useRef<HTMLSpanElement | null>(null);
+  const slideOverBG :any = useRef<HTMLSpanElement | null>(null);
+  const slideOver :any = useRef<HTMLSpanElement | null>(null);
 
   const toggleSlideover = () => {
     slideOverContainer.current?.classList.toggle("invisible");
