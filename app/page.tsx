@@ -21,6 +21,8 @@ export default function Home() {
   const [Blogs, setBlog] = useState<Blog[] | []>([]);
 
   const getData = async () => {
+
+    console.log('gg')
     const response = await fetch("api/blog");
 
     const result = await response.json();
