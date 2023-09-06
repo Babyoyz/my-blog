@@ -3,15 +3,16 @@ import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import ButtonDarkMode from "@/components/ButtonDarkMode";
 interface NavbarProps {
   urls: Array<any>;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ urls }) => {
-  const slideOverContainer1 :any = useRef<HTMLSpanElement | null>(null);
-  const slideOverContainer :any = useRef<HTMLSpanElement | null>(null);
-  const slideOverBG :any = useRef<HTMLSpanElement | null>(null);
-  const slideOver :any = useRef<HTMLSpanElement | null>(null);
+  const slideOverContainer1: any = useRef<HTMLSpanElement | null>(null);
+  const slideOverContainer: any = useRef<HTMLSpanElement | null>(null);
+  const slideOverBG: any = useRef<HTMLSpanElement | null>(null);
+  const slideOver: any = useRef<HTMLSpanElement | null>(null);
 
   const toggleSlideover = () => {
     slideOverContainer.current?.classList.toggle("invisible");
@@ -19,10 +20,10 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
     slideOverBG.current?.classList.toggle("opacity-50");
     slideOver.current?.classList.toggle("translate-x-full");
   };
- 
+
   return (
     <>
-      <nav className="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-md bg-blue-400 md:mx-auto text-white">
+      <nav className="flex flex-wrap items-center justify-between w-full z-50 py-4 md:py-0 px-4 text-md bg-blue-400  dark:bg-neutral-700 dark:text-white  md:mx-auto text-black sticky top-0">
         <div className="div-logo">
           <Link href="/">
             <Image
@@ -49,22 +50,27 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
                 {item.name}
               </Link>
             ))}
+            <ButtonDarkMode />
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 block md:hidden"
-            onClick={toggleSlideover}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          <div className="flex md:hidden  gap-2">
+            <ButtonDarkMode />
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 "
+              onClick={toggleSlideover}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
         </div>
       </nav>
       <div

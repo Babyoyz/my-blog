@@ -5,7 +5,7 @@ import { SocialIcon } from "react-social-icons";
 function Profilecard() {
   return (
     <>
-      <div className="w-8/12 rounded overflow-hidden shadow-lg">
+      <div className="w-8/12 overflow-hidden shadow-lg rounded-3xl text-black dark:text-white">
         <div className="block md:flex">
           <div className="w-full sm:w-1/3">
             <Image
@@ -19,21 +19,21 @@ function Profilecard() {
           <div className="w-full">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">BabyOYZ . </div>
-              <p className="text-gray-700 text-base">
+              <p className="text-base">
                 Thaweeporn Areepun (Oil) Developer at Wisesight
               </p>
-              <p className="text-gray-700 text-base px-4 mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil reprehenderit eum numquam quo id pariatur illo, nostrum ex debitis quis?
+              <p className="text-base px-4 mt-3">
+                lorem 
               </p>
             </div>
             <div className="px-6 pt-4 pb-2">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <span className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold  mr-2 mb-2">
                 #roadtrip
               </span>
-              <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <span className="inline-block bg-green-200 rounded-full dark:bg-green-800 px-3 py-1 text-sm font-semibold  mr-2 mb-2">
                 #travel
               </span>
-              <span className="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <span className="inline-block bg-red-200 rounded-full px-3 py-1 dark:bg-red-800 text-sm font-semibold  mr-2 mb-2">
                 #motorcycle
               </span>
             </div>
