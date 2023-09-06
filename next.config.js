@@ -6,6 +6,7 @@ const nextConfig = {
             "localhost",
             "babyoyz.github.io",
             "images.pexels.com",
+            "ui-avatars.com",
         ],
     },
 };

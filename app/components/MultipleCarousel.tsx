@@ -26,7 +26,6 @@ const MultipleCarousel: React.FC<MultipleCarouselProps> = ({
 
   return (
     <>
-      <div className="max-w-screen-lg mx-auto px-4 md:px-8 py-12 transition-all duration-500 ease-linear">
         <h1 className="font-cabinetGrotesk text-2xl lg:text-3xl font-bold mb-12 leading-tight text-black dark:text-white ">
           {label}
         </h1>
@@ -137,7 +136,6 @@ const MultipleCarousel: React.FC<MultipleCarouselProps> = ({
             </button>
           </div>
         </div>
-      </div>
     </>
   );
 };
