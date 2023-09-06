@@ -24,6 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
     slideOverContainer.current?.classList.toggle("invisible");
     slideOverBG.current?.classList.toggle("opacity-0");
     slideOverBG.current?.classList.toggle("opacity-50");
+    slideOverContainer1.current?.classList.toggle("z-50")
     slideOver.current?.classList.toggle("translate-x-full");
   };
 
@@ -66,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6 "
+              className="w-6 h-6 z-50"
               onClick={toggleSlideover}
             >
               <path
@@ -79,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
         </div>
       </nav>
       <div
-        className="block md:hidden z-50 w-screen h-screen items-center justify-center absolute"
+        className="block md:hidden w-screen h-screen items-center justify-center absolute"
         ref={slideOverContainer1}
       >
         <div
