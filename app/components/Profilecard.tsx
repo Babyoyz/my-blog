@@ -36,6 +36,9 @@ function Profilecard() {
               <span className="inline-block bg-red-200 rounded-full px-3 py-1 dark:bg-red-800 text-sm font-semibold  mr-2 mb-2">
                 #motorcycle
               </span>
+              <span className="inline-block bg-red-200 rounded-full px-3 py-1 dark:bg-red-800 text-sm font-semibold  mr-2 mb-2">
+                #Campping
+              </span>
             </div>
             <div className="px-6 flex flex-col h-full self-end">
               <div className="px-6 div-social  gap-5 flex">
