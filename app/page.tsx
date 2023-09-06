@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import CardBlog from "@/components/CardBlog";
 
@@ -21,8 +19,6 @@ export default function Home() {
   const [Blogs, setBlog] = useState<Blog[] | []>([]);
 
   const getData = async () => {
-
-    console.log('gg')
     const response = await fetch("api/blog");
 
     const result = await response.json();
@@ -32,7 +28,6 @@ export default function Home() {
 
   useEffect(() => {
     getData();
-
   }, []);
 
   return (
@@ -46,19 +41,21 @@ export default function Home() {
             New Blog
           </h1>
         </div>
-        <div className="card-body max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
-
-        <div>
-      {!Blogs ? (
-        <p>Loading...</p>
-      ) : (
-        <div>
-            <CardBlog  createby={'test'} title={'ttt'} 
-                        textbody={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident tempora dolore praesentium aliquam optio. Voluptatum inventore officia dignissimos porro aut nemo, incidunt totam nihil corrupti dolor, numquam officiis consequuntur, quibusdam ea laboriosam. Obcaecati molestias minima quidem. Quis dicta impedit repellat? Soluta aliquam saepe deleniti quidem accusantium cupiditate voluptates praesentium iste iusto quasi animi unde repudiandae sapiente ut officiis quam veniam incidunt dolor labore eius, consectetur natus. Nobis obcaecati nisi aperiam dolorum vitae veniam aspernatur labore fuga doloribus! Earum amet dolorem laudantium, magni, pariatur alias suscipit, saepe dolorum laborum architecto asperiores? Earum voluptatem beatae commodi debitis veniam error voluptatibus aliquid enim.`} />
-        </div>
-        
-      )}
-    </div>
+        <div className="card-body max-w-screen-lg mx-auto">
+          {Blogs.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
+              {Blogs.map((item, index) => (
+                <CardBlog
+                  key={index}
+                  createby={item.title}
+                  title={item.title}
+                  textbody={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident tempora dolore praesentium aliquam optio. Voluptatum inventore officia dignissimos porro aut nemo, incidunt totam nihil corrupti dolor, numquam officiis consequuntur, quibusdam ea laboriosam. Obcaecati molestias minima quidem. Quis dicta impedit repellat? Soluta aliquam saepe deleniti quidem accusantium cupiditate voluptates praesentium iste iusto quasi animi unde repudiandae sapiente ut officiis quam veniam incidunt dolor labore eius, consectetur natus. Nobis obcaecati nisi aperiam dolorum vitae veniam aspernatur labore fuga doloribus! Earum amet dolorem laudantium, magni, pariatur alias suscipit, saepe dolorum laborum architecto asperiores? Earum voluptatem beatae commodi debitis veniam error voluptatibus aliquid enim.`}
+                />
+              ))}
+            </div>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
     </main>
