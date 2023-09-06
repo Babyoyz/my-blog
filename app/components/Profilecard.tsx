@@ -16,14 +16,14 @@ function Profilecard() {
               width={200}
             />
           </div>
-          <div className="w-full">
+          <div className="w-full h-auto py-5">
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">BabyOYZ . </div>
+              <div className="font-bold text-xl mb-2">BabyOYZ . (Oil) </div>
               <p className="text-base">
-                Thaweeporn Areepun (Oil) Developer at Wisesight
+                Thaweeporn Areepun current work Developer at Wisesight . 
               </p>
               <p className="text-base px-4 mt-3">
-                lorem 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ad beatae consequatur expedita molestiae possimus nemo vel perferendis corporis soluta modi cum adipisci cupiditate vitae nulla veniam illum nobis pariatur, quibusdam dignissimos quos omnis a saepe. Praesentium excepturi veritatis nostrum nisi recusandae rerum fuga quisquam exercitationem beatae sint iure necessitatibus, ipsum voluptate quos quibusdam vel tenetur, inventore doloribus est atque. Consequuntur nisi placeat dignissimos id ipsa eveniet aperiam corrupti dolorum nostrum, beatae illum culpa maiores similique impedit quisquam possimus! Dolor sapiente incidunt atque magnam doloremque expedita ab voluptatum obcaecati alias delectus. Magni sit distinctio esse modi nihil odio doloremque repudiandae?
               </p>
             </div>
             <div className="px-6 pt-4 pb-2">
@@ -36,7 +36,7 @@ function Profilecard() {
               <span className="inline-block bg-red-200 rounded-full px-3 py-1 dark:bg-red-800 text-sm font-semibold  mr-2 mb-2">
                 #motorcycle
               </span>
-              <span className="inline-block bg-red-200 rounded-full px-3 py-1 dark:bg-red-800 text-sm font-semibold  mr-2 mb-2">
+              <span className="inline-block bg-blue-200 rounded-full px-3 py-1 dark:bg-blue-800 text-sm font-semibold  mr-2 mb-2">
                 #Campping
               </span>
             </div>

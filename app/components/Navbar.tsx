@@ -2,6 +2,12 @@
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import styled from "styled-components";
+
+const LineMobileNav = styled(Link)`
+  text-decoration: none;
+  font-size: 2rem;
+`;
 
 import ButtonDarkMode from "@/components/ButtonDarkMode";
 interface NavbarProps {
@@ -54,7 +60,6 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
           </div>
           <div className="flex md:hidden  gap-2">
             <ButtonDarkMode />
-
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -90,9 +95,9 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
           <div
             id="slideover"
             ref={slideOver}
-            className="w-96 bg-cyan-100 h-full absolute right-0 duration-300 ease-out transition-all translate-x-full"
+            className="w-96 bg-cyan-100 dark:bg-neutral-600  h-full absolute right-0 duration-300 ease-out transition-all translate-x-full"
           >
-            <div className="absolute cursor-pointer text-gray-600 top-0 w-8 h-8 flex items-center justify-center right-0 mt-5 mr-5">
+            <div className="absolute cursor-pointer text-neutral-600 dark:text-white top-0 w-8 h-8 flex items-center justify-center right-0 mt-5 mr-5">
               <svg
                 onClick={toggleSlideover}
                 className="w-6 h-6"
@@ -108,6 +113,33 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
+            </div>
+            <div>
+              <div className="flex h-screen justify-center items-center">
+                <div className="flex flex-col">
+                  <div className="flex-grow"></div>
+                  <div className="flex-shrink text-center">
+                    <div className="">
+                      <LineMobileNav href="/" onClick={toggleSlideover}>
+                        {" "}
+                        <h1 className="dark:text-white">Home</h1>
+                      </LineMobileNav>
+                    </div>
+                    {urls.map((item, index) => (
+                      <div className="" key={index}>
+                        <LineMobileNav
+                          href={item.url}
+                          onClick={toggleSlideover}
+                        >
+                          {" "}
+                          <h1 className="dark:text-white">{item.name}</h1>
+                        </LineMobileNav>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex-grow"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
