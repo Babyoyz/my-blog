@@ -5,6 +5,7 @@ const nextConfig = {
         domains: [
             "localhost",
             "babyoyz.github.io",
+            "images.pexels.com",
         ],
     },
 };

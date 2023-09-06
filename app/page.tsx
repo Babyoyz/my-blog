@@ -1,5 +1,17 @@
-import Image from 'next/image'
+import Image from "next/image";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const MultipleCarousel = dynamic(
+  () => import("@/components/MultipleCarousel"),
+  {
+    loading: () => (
+      <div className=" w-full h-screen  overflow-hiddenopacity-75 flex flex-col items-center justify-center">
+        <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+      </div>
+    ),
+  }
+);
 
 export const metadata: Metadata = {
   title: "Babyoyz || Main",
@@ -7,20 +19,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-return (
+  return (
     <main className="">
-        <div className='Corasel'>
-        <div className="flex h-screen justify-center items-center">
-            <div className="flex flex-col">
-              <div className="flex-grow"></div>
-              <div className="flex-shrink text-center">
-                <p className="text-2xl">Coming Soon ...</p>
-              </div>
-              <div className="flex-grow"></div>
-            </div>
-          </div>
-
-        </div>
+      <div className="Corasel">
+        <MultipleCarousel label="My Motocyle" Images={[]} />
+      </div>
     </main>
-  )
+  );
 }
