@@ -37,11 +37,10 @@ export default  function Home() {
 
 
   useEffect(() => {
-
+    const fetchData = getData("All");
+    fetchData();
     return () => {
 
-      const fetchData = getData("All");
-      fetchData();
       utilsConvertDate.ConvertDate()
     }
   }, []);
