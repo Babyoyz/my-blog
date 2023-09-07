@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
 
   return (
     <>
-      <nav className="flex flex-wrap items-center justify-between w-full z-50 py-4 md:py-0 px-4 text-md bg-blue-400  dark:bg-neutral-700 dark:text-white  md:mx-auto text-black sticky top-0">
+      <nav className="flex flex-wrap items-center justify-between w-full z-50 py-4 md:py-0 px-4 text-md bg-blue-400  dark:bg-neutral-700 dark:text-white  md:mx-auto text-black sticky">
         <div className="div-logo">
           <Link href="/">
             <Image
@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
         </div>
       </nav>
       <div
-        className="block md:hidden w-screen h-screen items-center justify-center absolute"
+        className="block md:hidden w-screen items-center justify-center absolute"
         ref={slideOverContainer1}
       >
         <div

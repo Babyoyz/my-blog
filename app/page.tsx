@@ -19,11 +19,23 @@ const MultipleCarousel = dynamic(
   }
 );
 
-export default  function Home() {
+export default function Home() {
 
   const [Blogs, setBlog] = useState<Blog[] | []>([]);
 
-  const getData = (params: string) => async () => {
+  // const getData = (params: string) => async () => {
+
+  //   setBlog([])
+
+  //   const response = await fetch("api/blog");
+
+  //   const result = await response.json();
+
+  //   setBlog(result);
+
+  // };
+
+  const getData = async (params: string) => {
 
     setBlog([])
 
@@ -36,9 +48,11 @@ export default  function Home() {
   };
 
 
+
+
   useEffect(() => {
-    const fetchData = getData("All");
-    fetchData();
+    getData('all');
+
     return () => {
 
       utilsConvertDate.ConvertDate()
@@ -50,21 +64,18 @@ export default  function Home() {
       <div className="mx-auto px-4 md:px-8 py-12 transition-all duration-500 ease-linear">
         <MultipleCarousel label="My Motorcycle" Images={[]} />
       </div>
+      <section className="mb-4 bg-blue-50">
       <div className="main-card-blog px-4 md:px-8 py-12">
         <div className="main-card-blog-label">
           <h1 className="font-cabinetGrotesk text-2xl lg:text-3xl font-bold mb-12 leading-tight text-black dark:text-white ">
             New Blog
           </h1>
         </div>
-        <div className="card-body max-w-screen-lg mx-auto">
-          <div className="Category py-5">
-            <div className="flex gap-10 ">
-              <Category onClick={getData('All')} label="All" name="pageCat" className="" defaultChecked={true} />
-              <Category onClick={getData('Blog')} label="Blog" name="pageCat" className="" defaultChecked={false} />
-              <Category onClick={getData('Motorcycle')} label="Motorcycle" name="pageCat" className=""  defaultChecked={false} />
-              <Category onClick={getData('Other')} label="Other" name="pageCat" className="" defaultChecked={false} />
-            </div>
+        <div className="card-body max-w-screen-lg mx-auto ">
+          <div className="Category py-5 sticky top-0 z-40">
+                  <Category onClick={getData} />
           </div>
+          <div>
           {Blogs.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
               {Blogs.map((item, index) => (
@@ -84,8 +95,12 @@ export default  function Home() {
               </h2>
             </div>
           )}
+          </div>
+      
         </div>
       </div>
+      </section>
+   
     </main>
   );
 }
