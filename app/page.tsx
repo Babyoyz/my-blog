@@ -72,7 +72,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="card-body max-w-screen-lg mx-auto ">
-          <div className="Category py-5 sticky top-0 z-40">
+          <div className="Category  sticky top-5 md:top-0 py-2 z-40 w-4/5">
                   <Category onClick={getData} />
           </div>
           <div>

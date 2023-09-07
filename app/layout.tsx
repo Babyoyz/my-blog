@@ -51,7 +51,7 @@ export default function RootLayout({
       <body className="bg-blue-50 dark:bg-gray-400 overflow-auto h-80">
         <div className=" bg-blue-50 h-full ">
           <section className="mb-4 bg-blue-50">
-            <div className=" sticky top-0 z-30">
+            <div className=" sticky top-0 z-40">
               <Navbar urls={Url} />
             </div>
             <div className="p-4">
