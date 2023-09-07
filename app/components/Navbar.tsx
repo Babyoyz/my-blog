@@ -34,14 +34,14 @@ const Navbar: React.FC<NavbarProps> = ({ urls }) => {
         <div className="div-logo">
           <Link href="/">
             <Image
-              src="/logo-full.webp"
+              src="/assets/logo-full.webp"
               width={50}
               height={0}
               className="hidden md:block w-full"
               alt="logo-full"
             />
             <Image
-              src="/logo-small-removebg-preview.png"
+              src="/assets/logo-small-removebg-preview.png"
               width={50}
               height={0}
               className="block md:hidden w-full"

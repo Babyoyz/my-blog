@@ -48,12 +48,6 @@ export default function RootLayout({
   InitUrl();
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-      </Head>
       <body className="bg-blue-50 dark:bg-gray-400">
         <Navbar urls={Url} />
         {children}
